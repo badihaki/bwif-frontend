@@ -3,30 +3,53 @@ import './App.css';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [newuser, setNewUser] = useState({
+    email:"",
+    password:"",
+    password_confirmation:""
+  })
 
-  useEffect(()=>{
-    fetch("/hello").then(r=>r.json()).then(data=>{
-      console.log(data);
-      setCount(data.count);
-    });
-  },[])
+  const [loginUser, setLogInUser] = useState({
+    email:"",
+    password:""
+  })
+
+  const [user, setUser] = useState(null);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Count: {count}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form>
+        <h2>Sign Up</h2>
+        Email
+        <br />
+        <input type='text' name='email' />
+        <br />
+        Password
+        <br />
+        <input type='text' name='password' />
+        <br />
+        Confirm Password
+        <br />
+        <input type='text' name='password_confirmation' />
+        <br />
+        <button>Submit</button>
+        <br />
+      </form>
+      <br />
+      <form>
+        <h2>Sign In</h2>
+        Email
+        <br />
+        <input type='text' name='email' />
+        <br />
+        Password
+        <br />
+        <input type='text' name='password' />
+        <br />
+        <button>Submit</button>
+      </form>
+      
     </div>
   );
 }

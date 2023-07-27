@@ -1,3 +1,4 @@
+/*
 .App {
   text-align: center;
 }
@@ -35,4 +36,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+** This is all the stuff that came with create-react=app
+
+*/
+
+.App {
+  text-align: center;
+  background-color:lightsalmon;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: whitesmoke;
+  font-size: 22px;
+  padding-bottom: 15px;
+  padding-top: 01px;
 }
