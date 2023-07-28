@@ -32,7 +32,7 @@ function App() {
         if(response.ok){
           response.json().then(data =>{
             console.log(data);
-            setUser(data);
+            setUser(data.data);
             setNewUser({
               email:"",
               password:"",
@@ -78,6 +78,7 @@ function App() {
       </div>
     )
   }
+
   function LogInComponent(){
 
     const [loginUser, setLogInUser] = useState({
@@ -85,17 +86,45 @@ function App() {
       password:""
     })
 
+    function handleSubmit(event){
+      event.preventDefault();
+
+      fetch('/login', {
+        method: "POST",
+        headers: {
+          "Content-Type" : "application/json"
+        },
+        body: JSON.stringify({user:loginUser})
+      }).then(response=>{
+        if(response.ok){
+          response.json().then(data=>{
+            console.log(data);
+            setUser(data.data);
+          })
+        }
+        else{
+          response.json().then(data=>console.log(data));
+        }
+      })
+    }
+
+    function handleFormChange(event){
+      const updatedUser = {...loginUser};
+      updatedUser[event.target.name] = event.target.value;
+      setLogInUser(updatedUser);
+    }
+
     return(
       <div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <h2>Log In</h2>
           Email
           <br />
-          <input type='text' name='email' />
+          <input type='text' name='email' value={loginUser.email} onChange={handleFormChange} />
           <br />
           Password
           <br />
-          <input type='text' name='password' />
+          <input type='text' name='password' value={loginUser.password} onChange={handleFormChange} />
           <br />
           <button>Submit</button>
         </form>
