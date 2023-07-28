@@ -145,9 +145,17 @@ function App() {
 }
 
 function LogoutComponent(){
+  
+  function handleLogOutButton(){
+    fetch('/logout', {
+      method: "DELETE"
+    }).then(setUser(null))
+  }
+
   return(
     <div>
-      <button>Logout</button>
+      <h2>{user.profile_name}</h2>
+      <button onClick={handleLogOutButton}>Logout</button>
     </div>
   )
 }
