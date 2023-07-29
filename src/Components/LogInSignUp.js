@@ -156,7 +156,7 @@ function SignupLoginComponent(){
     }
     
       return(
-        <div className="App">
+        <div className="LoginSignup">
           { user ? <LogoutComponent /> : <SignupLoginComponent /> }
         </div>
       )

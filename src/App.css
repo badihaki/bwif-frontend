@@ -42,9 +42,27 @@
 
 */
 
-.App {
+#app{
+  display: flex;
+  flex-flow: row wrap;
   text-align: center;
-  background-color:lightsalmon;
+  background-color: rgb(250, 228, 226);
+}
+#app>*{
+  padding: 10px;
+  margin: 10px;
+  flex: 1 100%;
+  border-radius: 10px;
+}
+
+#navigation{
+  background-color:rgb(247, 186, 96);
+  color: whitesmoke;
+}
+
+#content {
+  text-align: center;
+  background-color:rgb(196, 179, 173);
   margin-top: 5%;
   margin-left: 10%;
   margin-right: 10%;
@@ -52,4 +70,12 @@
   font-size: 22px;
   padding-bottom: 15px;
   padding-top: 01px;
+}
+
+#content-navigation{
+  background-color: rgb(250, 114, 114);
+}
+
+#main-content{
+  background-color: salmon;
 }
