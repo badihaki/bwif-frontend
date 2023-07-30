@@ -14,7 +14,6 @@ function App() {
     <div id='app'>
       { /*<SignupLoginComponent />*/ }
       <div id='navigation'>
-        <h4>Navigation</h4>
         <ul>
           <li className='link'>
             User's Kitchen
@@ -26,6 +25,9 @@ function App() {
             Search Recipes
           </li>
         </ul>
+        <span id='profile-link' className='link'>
+            User Profile
+          </span>
       </div>
       <div id='content'>
         <h4>Content</h4>
