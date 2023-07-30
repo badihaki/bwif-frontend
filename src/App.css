@@ -59,18 +59,20 @@
   margin: 2px;
   flex: 1 100%;
   border-radius: 10px;
+
+  position: fixed relative;
 }
 
 #navigation{
   background-color:rgb(247, 186, 96);
   color: whitesmoke;
 
-  position: sticky;
+  position: fixed;
   top: 0vh;
   max-height: 3rem;
+  min-width: 95%;
 
   flex: 1;
-  z-index: 3;
 }
 
 #navigation > ul {
@@ -104,10 +106,8 @@
   padding-bottom: 15px;
   padding-top: 1px;
 
-  
-
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
 }
 
 #content-navigation{
