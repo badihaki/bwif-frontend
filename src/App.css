@@ -93,13 +93,14 @@
   font-size: 1rem;
 }
 
-#profile-link {
+#logout {
   margin-left: 10%;
   bottom: 35px;
   left: 5rem;
-  
-  font-size: 1.5rem;
 
+  background-color: antiquewhite;
+  border: .35em solid bisque;
+  
   position: relative;
 }
 
