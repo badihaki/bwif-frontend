@@ -50,6 +50,7 @@
   align-items: center;
 
   text-align: center;
+  font-size: 62.5%;
   background-color: rgb(250, 228, 226);
 
   height: 100vh;
@@ -82,19 +83,29 @@
   gap: 5%;
 }
 
+#navigation > ul > .nav-link {
+  background-color: bisque;
+  
+  color: coral;
+  font-weight: 800;
+
+  padding: .2rem;
+  font-size: 1rem;
+}
+
 #profile-link {
   margin-left: 10%;
   bottom: 35px;
-  left: 75px;
+  left: 5rem;
   
-  font-size: 22px;
+  font-size: 1.5rem;
 
   position: relative;
 }
 
 #content {
   text-align: center;
-  font-size: 22px;
+  font-size: 1.15rem;
   color: whitesmoke;
   
   background-color:rgb(196, 179, 173);
@@ -107,13 +118,18 @@
   padding-top: 1px;
 
   display: flex;
-  flex-flow: column nowrap;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 1em;
 }
 
 #content-navigation{
   background-color: rgb(250, 114, 114);
+
+  align-self: flex-start;
 }
 
 #main-content{
   background-color: salmon;
+  flex-grow: 1;
 }

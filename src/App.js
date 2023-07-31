@@ -15,14 +15,14 @@ function App() {
       { /*<SignupLoginComponent />*/ }
       <div id='navigation'>
         <ul>
-          <li className='link'>
+          <li className='nav-link'>
             User's Kitchen
           </li>
-          <li className='link'>
+          <li className='nav-link'>
             User's Feed
           </li>
-          <li className='link'>
-            Search Recipes
+          <li className='nav-link'>
+            World Recipe Lab
           </li>
         </ul>
         <span id='profile-link' className='link'>
@@ -30,8 +30,8 @@ function App() {
           </span>
       </div>
       <div id='content'>
-        <h4>Content</h4>
         <div id='content-navigation'>
+        <h4>Content</h4>
           <ul>
             <li className='nav-link'>Nav-Link</li>
             <li className='nav-link'>Nav-Link</li>
