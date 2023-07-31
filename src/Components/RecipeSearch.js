@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 
-function UserKitchen(){
-
+function RecipeSearch(){
 
     return(
         <div>
@@ -10,4 +9,4 @@ function UserKitchen(){
     )
 }
 
-export default UserKitchen;
+export default RecipeSearch;

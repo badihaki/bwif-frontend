@@ -4,16 +4,42 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { UserProvider } from './Components/Context/UserContext';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Home from './Components/Home';
+import UserKitchen from './Components/User/UserKitchen';
+import UserFeed from './Components/User/UserFeed';
+import RecipeSearch from './Components/RecipeSearch';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    // errorElement: <Error />,
+    children: [
+      {
+        index: true, element: <Home />
+      },
+      {
+        path: "/my-kitchen", element: <UserKitchen />
+      },
+      {
+        path: "/feed", element: <UserFeed />
+      },
+      {
+        path: "/search", element: <RecipeSearch />
+      }
+    ]
+  },
+])
+
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <UserProvider>
-        <App />
-      </UserProvider>
-    </BrowserRouter>
+    <UserProvider>
+      <RouterProvider router={router} />
+      { /* <App /> */ }
+    </UserProvider>
   </React.StrictMode>
 );
 

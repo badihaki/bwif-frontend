@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { UserContext } from "../Context/UserContext";
 
-function UserKitchen(){
+function UserFeed(){
 
-    const [ user ] = useContext(UserContext);
+    const { user } = useContext(UserContext);
 
     return(
         <div>
@@ -12,4 +12,4 @@ function UserKitchen(){
     )
 }
 
-export default UserKitchen;
+export default UserFeed;

@@ -52,16 +52,19 @@
   text-align: center;
   font-size: 62.5%;
   background-color: rgb(250, 228, 226);
-
-  height: 100vh;
+  
+  min-height: 100vh;
+  
+  border-radius: 12rem;
 }
 #app>*{
   padding: 2px;
   margin: 2px;
   flex: 1 100%;
-  border-radius: 10px;
 
   position: fixed relative;
+
+  border-radius: 12rem;
 }
 
 #navigation{
@@ -122,15 +125,23 @@
   align-items: center;
   flex-flow: row nowrap;
   gap: 1em;
+
+  border-radius: 1.5em;
 }
 
 #content-navigation{
   background-color: rgb(250, 114, 114);
 
   align-self: flex-start;
+
+  gap: 1em;
+  
+  border-radius: 1.25rem;
 }
 
 #main-content{
   background-color: salmon;
   flex-grow: 1;
+
+  border-radius: 1.25rem;
 }

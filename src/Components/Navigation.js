@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { UserContext } from "./Context/UserContext";
+import { Link } from "react-router-dom";
 
 function Navigation(){
 
@@ -23,14 +24,25 @@ function Navigation(){
     return(
         <div id='navigation'>
             <ul>
-                <li className='nav-link'>
-                    User's Kitchen
+                <li className="nav-link">
+                    <Link to={"/"}>
+                        Home
+                    </Link>
                 </li>
                 <li className='nav-link'>
-                    User's Feed
+                    <Link to={"/my-kitchen"}>
+                        User's Kitchen
+                    </Link>
                 </li>
                 <li className='nav-link'>
-                    World Recipe Lab
+                    <Link to={"/feed"}>
+                        User's Feed
+                    </Link>
+                </li>
+                <li className='nav-link'>
+                    <Link to={"/search"}>
+                        World Recipe Lab
+                    </Link>
                 </li>
             </ul>
             <LogoutComponent />

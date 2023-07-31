@@ -3,7 +3,7 @@ import { UserContext } from "../Context/UserContext";
 
 function UserKitchen(){
 
-    const [ user ] = useContext(UserContext);
+    const { user } = useContext(UserContext);
 
     return(
         <div>

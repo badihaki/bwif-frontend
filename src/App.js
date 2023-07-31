@@ -1,7 +1,7 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Navigation from './Components/Navigation';
-import Home from './Components/Home';
+import { Outlet } from 'react-router-dom';
 
 function App() {
     
@@ -12,7 +12,7 @@ function App() {
     <div id='app'>
       <Navigation />
       <div id='content'>
-        <Home />
+        <Outlet />
       </div>
       <div></div>
       
