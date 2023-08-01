@@ -101,8 +101,19 @@ html {
 #logout {
   margin-left: 10%;
   
-  background-color: antiquewhite;
+  background-color: aliceblue;
   border: .35em solid bisque;
+  
+  position: relative;
+  bottom: 2.75em;
+  left: 20em;
+}
+
+#login {
+  margin-left: 10%;
+  
+  background-color: bisque;
+  border: .35em solid aliceblue;
   
   position: relative;
   bottom: 2.75em;

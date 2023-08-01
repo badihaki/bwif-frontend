@@ -21,6 +21,14 @@ function Navigation(){
         )
       }
 
+    function LoginComponent(){
+        return(
+            <Link to={"/login"} >
+                <button id="login">Login / Signup</button>
+            </Link>
+        )
+    }
+
     return(
         <div id='navigation'>
             <ul>
@@ -45,7 +53,7 @@ function Navigation(){
                     </Link>
                 </li>
             </ul>
-            <LogoutComponent />
+            { user? <LogoutComponent /> :<LoginComponent /> }
         </div>
     )
 }

@@ -43,8 +43,6 @@ function SignupLoginComponent(){
           }
         )}
     
-        console.log(newUser)
-    
         function handleFormChange(event){
           const userData = {...newUser};
           userData[event.target.name] = event.target.value;
@@ -140,7 +138,7 @@ function SignupLoginComponent(){
     }
     
       return(
-        <div className="LoginSignup">
+        <div id="main-content">
           <SignupLoginComponent />
         </div>
       )

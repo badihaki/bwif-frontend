@@ -9,6 +9,7 @@ import Home from './Components/Home';
 import UserKitchen from './Components/User/UserKitchen';
 import UserFeed from './Components/User/UserFeed';
 import RecipeSearch from './Components/RecipeSearch';
+import SignupLoginComponent from './Components/LogInSignUp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -29,6 +30,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/search", element: <RecipeSearch />
+      },
+      {
+        path: "/login", element: <SignupLoginComponent />
       }
     ]
   },
@@ -38,7 +42,6 @@ root.render(
   <React.StrictMode>
     <UserProvider>
       <RouterProvider router={router} />
-      { /* <App /> */ }
     </UserProvider>
   </React.StrictMode>
 );
