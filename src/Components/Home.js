@@ -2,9 +2,8 @@ import React from "react";
 
 function Home(){
     return(
-        <div>
+        <>
             <div id='content-navigation'>
-            <h4>Content</h4>
             <ul>
                 <li className='nav-link'>Nav-Link</li>
                 <li className='nav-link'>Nav-Link</li>
@@ -26,7 +25,7 @@ function Home(){
                     Ut lobortis vel elit tempor maximus. Morbi ac euismod enim. Donec quis orci nulla. Maecenas malesuada, ex id feugiat semper, orci metus pulvinar leo, in ornare sem dui venenatis lectus. Nam sed ornare ipsum. Donec sollicitudin eu lorem non gravida. Sed nec risus ac ipsum fringilla tincidunt molestie sed justo. Donec luctus eget odio at cursus. Integer sed orci condimentum ex accumsan dictum sed eget nunc. Proin eget nunc est. Morbi pretium elit id purus gravida laoreet. Etiam rutrum neque enim, eget bibendum dolor dapibus quis. Nam fermentum auctor gravida.
                 </p>
             </div>
-        </div>
+        </>
     )
 }
 
