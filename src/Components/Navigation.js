@@ -37,16 +37,16 @@ function Navigation(){
                         Home
                     </Link>
                 </li>
-                <li className='nav-link'>
+                { user? <li className='nav-link'>
                     <Link to={"/my-kitchen"}>
                         User's Kitchen
                     </Link>
-                </li>
-                <li className='nav-link'>
+                </li> : ""}
+                { user? <li className='nav-link'>
                     <Link to={"/feed"}>
                         User's Feed
                     </Link>
-                </li>
+                </li> : ""}
                 <li className='nav-link'>
                     <Link to={"/search"}>
                         World Recipe Lab

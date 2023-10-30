@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "./Context/UserContext";
+import { Link } from "react-router-dom";
 
 function SignupLoginComponent(){
 
@@ -9,6 +10,7 @@ function SignupLoginComponent(){
 
         const [newUser, setNewUser] = useState({
           email:"",
+          profile_name:"",
           password:"",
           password_confirmation:""
         })
@@ -56,6 +58,10 @@ function SignupLoginComponent(){
               Email
               <br />
               <input type='text' name='email' onChange={handleFormChange} value={newUser.email} />
+              <br />
+              Account Name
+              <br />
+              <input type='text' name='profille_name' onChange={handleFormChange} value={newUser.profile_name} />
               <br />
               Password
               <br />
@@ -136,10 +142,19 @@ function SignupLoginComponent(){
           </div>
         );
     }
+
+    function RedirectComponent(){
+      return(
+        <div>
+          <h3>Logged in successfully.</h3>
+          <p>Please go back to <Link to={"/"}>home</Link></p>
+        </div>
+      )
+    }
     
       return(
         <div id="main-content">
-          <SignupLoginComponent />
+          { user? <RedirectComponent /> : <SignupLoginComponent />}
         </div>
       )
 

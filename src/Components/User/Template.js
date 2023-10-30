@@ -1,9 +1,6 @@
-import React, { useContext } from "react";
-import { UserContext } from "./Context/UserContext";
+import React from "react";
 
-function Home(){
-    const {user} = useContext(UserContext);
-    
+function Template(){
     return(
         <>
             <div id='content-navigation'>
@@ -15,7 +12,6 @@ function Home(){
             </ul>
             </div>
             <div id='main-content'>
-                {user? <h3>Welcome, {user.profile_name}</h3> : ""}
                 <p className='stuff'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum nisl nunc, sed finibus justo pulvinar eget. Aenean quis sagittis ipsum. Suspendisse faucibus scelerisque lacus. Mauris sed mauris viverra, hendrerit turpis quis, consequat ligula. Nunc tristique velit libero, finibus eleifend turpis tempor at. Maecenas tincidunt condimentum nisl et blandit. Pellentesque vel posuere justo. Suspendisse nec dolor lacus. Maecenas posuere, lectus eget varius faucibus, velit nisi auctor neque, non condimentum tortor ex et justo. Etiam finibus in urna vel dictum. Mauris nec mollis dolor. Aliquam odio nulla, ullamcorper ullamcorper tellus quis, tristique condimentum massa. Mauris ac mattis enim. Suspendisse a vehicula augue. Quisque aliquet ligula in efficitur dapibus. Nulla pretium suscipit diam, id rhoncus massa dignissim id.
                 </p>
@@ -33,4 +29,4 @@ function Home(){
     )
 }
 
-export default Home;
+export default Template;

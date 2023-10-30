@@ -7,7 +7,7 @@ function App() {
     
   useEffect(()=>{
     fetch("/hello").then(r=>r.json()).then(data=>console.log(data))
-  })
+  }, [])
   return(
     <div id='app'>
       <Navigation />
