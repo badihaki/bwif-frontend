@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import { UserContext } from './Components/Context/UserContext';
 
 function App() {
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
     
   useEffect(()=>{
     fetch("/login").then(response=>{
@@ -27,6 +27,7 @@ function App() {
       }
       else{
         console.log(`error`);
+        response.json().then(error=>console.log(error));
       }
     })
   }, [])
