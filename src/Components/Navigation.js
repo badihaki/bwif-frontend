@@ -11,7 +11,19 @@ function Navigation(){
         function handleLogOutButton(){
           fetch('/logout', {
             method: "DELETE"
-          }).then(setUser(null))
+          }).then(response=>{
+            if(response.ok){
+                response.json().then(data=>{
+                    console.log(data);
+                    setUser(null);
+                })
+            }
+            else{
+                response.json().then(data=>{
+                    console.error(data);
+                })
+            }
+          })
         }
       
         return(
